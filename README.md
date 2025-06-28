@@ -43,10 +43,7 @@ A simple e-commerce shop built with Next.js, TypeScript, and DummyJSON API.
 
 ## Test Account
 
-You can use the following credentials to test the application:
-
-- Username: `kminchelle`
-- Password: `0lelplR`
+Choose account in this site https://dummyjson.com/users
 
 ## Project Structure
 
