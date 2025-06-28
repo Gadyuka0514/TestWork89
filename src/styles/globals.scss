@@ -1,0 +1,128 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  color: $light-text;
+  background-color: $dark-background;
+  min-height: 100vh;
+}
+
+a {
+  color: $light-text;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.container {
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+.error-message {
+  color: $error-color;
+  font-size: $font-size-sm;
+  margin-top: $spacing-xs;
+}
+
+// Top bar styles
+.top-bar {
+  background-color: $dark-background;
+  padding: $spacing-xs 0;
+  border-bottom: 1px solid $border-color;
+  font-size: $font-size-sm;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-info {
+    display: flex;
+    gap: $spacing-lg;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+      color: $secondary-color;
+
+      &:hover {
+        color: $light-text;
+      }
+
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .auth-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $secondary-color;
+
+    &:hover {
+      color: $light-text;
+    }
+
+    i {
+      color: $primary-color;
+    }
+  }
+}
+
+// Main navigation styles
+.main-nav {
+  background-color: $dark-background;
+  border-bottom: 1px solid $border-color;
+  padding: $spacing-md 0;
+
+  .container {
+    display: flex;
+    gap: $spacing-xl;
+  }
+
+  a {
+    color: $light-text;
+    font-size: $font-size-base;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

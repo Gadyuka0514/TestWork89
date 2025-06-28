@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+.footer {
+  background-color: $background-color;
+  border-top: 1px solid $border-color;
+  padding: $spacing-md 0;
+  margin-top: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $text-color;
+  font-size: $font-size-sm;
+}

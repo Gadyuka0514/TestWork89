@@ -1,0 +1,46 @@
+// Colors
+$primary-color: #ff0000;
+$secondary-color: #666;
+$background-color: #ffffff;
+$dark-background: #1a1d24;
+$text-color: #1f2937;
+$light-text: #ffffff;
+$error-color: #ef4444;
+$success-color: #22c55e;
+$border-color: #2a2d35;
+
+// Typography
+$font-family:
+  'Inter',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Border
+$border-radius: 8px;
+$border-radius-lg: 12px;
