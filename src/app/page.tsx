@@ -16,7 +16,7 @@ export default function Home() {
       try {
         const data = await getProducts();
         setProducts(data);
-      } catch (err) {
+      } catch {
         setError('Failed to load products. Please try again later.');
       } finally {
         setIsLoading(false);

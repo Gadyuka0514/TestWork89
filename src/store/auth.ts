@@ -4,7 +4,7 @@ import { create } from 'zustand';
 import { User, AuthResponse } from '@/types';
 import { getCurrentUser, refreshToken } from '@/api';
 
-interface AuthState {
+export interface AuthState {
   user: User | null;
   setUser: (authResponse: AuthResponse) => void;
   isAuthenticated: boolean;
@@ -36,10 +36,10 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
   refreshSession: async () => {
     try {
-      const tokens = await refreshToken();
+      await refreshToken();
       const user = await getCurrentUser();
       set({ user, isAuthenticated: true });
-    } catch (error) {
+    } catch {
       set({ user: null, isAuthenticated: false });
     }
   },
@@ -47,7 +47,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const user = await getCurrentUser();
       set({ user, isAuthenticated: true });
-    } catch (error) {
+    } catch {
       set({ user: null, isAuthenticated: false });
     }
   },

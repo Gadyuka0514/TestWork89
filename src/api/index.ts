@@ -21,22 +21,17 @@ api.interceptors.request.use((config) => {
 export const login = async (
   credentials: LoginCredentials
 ): Promise<AuthResponse> => {
-  try {
-    const response = await api.post('/auth/login', {
-      ...credentials,
-      expiresInMins: credentials.expiresInMins || 60,
-    });
+  const response = await api.post('/auth/login', {
+    ...credentials,
+    expiresInMins: credentials.expiresInMins || 60,
+  });
 
-    if (response.data.accessToken) {
-      localStorage.setItem('accessToken', response.data.accessToken);
-      localStorage.setItem('refreshToken', response.data.refreshToken);
-    }
-
-    return response.data;
-  } catch (error) {
-    console.error('Login error:', error);
-    throw error;
+  if (response.data.accessToken) {
+    localStorage.setItem('accessToken', response.data.accessToken);
+    localStorage.setItem('refreshToken', response.data.refreshToken);
   }
+
+  return response.data;
 };
 
 export const refreshToken = async (): Promise<{
